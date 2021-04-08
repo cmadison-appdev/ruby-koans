@@ -15,6 +15,19 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+h, s_1, s_2 = if(c > a || c > b)
+  [c, a, b]
+elsif b > a || b > c
+  [b, a, c]
+else 
+  [a, b, c]
+end
+  
+  if a <= 0 || b <= 0 || c <= 0
+		raise TriangleError
+	elsif s_1 + s_2 <= h
+		raise TriangleError
+	end
 end
 
 # Error class used in part 2.  No need to change this code.
